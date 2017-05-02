@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+    }
+    compileOptions {
+        sourceCompatibility ='1.7'
+        targetCompatibility ='1.7'
+    }
+    //databinding添加的
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    //rxlifecycle处理rxjava,rxandroid连接时的activity和fragment生命周期内的订阅,取消订阅问题
+    compile 'com.trello:rxlifecycle-components:1.0'
+    //rxBinding实现一些view与事件数据绑定,即时更新数据,下面的其他的按需要添加;
+    compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
+    //网咯框架使用的jar
+    compile 'com.squareup.retrofit2:retrofit:2.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    //google 加载图片的框架
+    compile 'com.github.bumptech.glide:glide:3.6.0'
+    //    卡片布局
+    compile 'com.android.support:cardview-v7:25.3.1'
+    //通用adapter
+    compile 'com.github.mcxtzhang:all-base-adapter:V1.5.2'
+    //一张图片实现点击效果图
+    compile 'com.github.maoruibin:OneDrawable:1.1.0'
+    //联动,协调控件
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+}

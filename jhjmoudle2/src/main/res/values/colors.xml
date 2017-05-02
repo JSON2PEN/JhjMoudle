@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="WHITE">#ffffff</color>
+    <!--viewpagerindex点击选中时的颜色-->
+    <color name="background_tab_pressed">#2aa0b0</color>
+    <!--默认颜色-->
+    <!--<color name="tab_normal_color">#ff0000</color>-->
+    <color name="Transparent">#00000000</color>
+
+
+    <color name="tab_select_text_color">#FF4081</color><!--pagerindex选中时字体的颜色-->
+    <color name="tab_normal_text_color">#da191919</color><!--pagerindex正常时字体的颜色-->
+
+    <color name="recoveryColorPrimary">#2196F3</color>
+    <color name="recoveryColorPrimaryDark">#2196F3</color>
+    <color name="recoveryColorAccent">#1976D2</color>
+    <color name="recoveryTextColor">#FFFFFF</color>
+</resources>
